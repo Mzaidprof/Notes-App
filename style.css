@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    background-size: 300% 300%;
+    padding-top: 4%;
+    padding-left: 10%;
+    animation: bg 8s linear infinite;
+}
+
+@keyframes bg {
+   0%{
+        background-position: 0% 0%;
+   }
+   50%{
+        background-position: 100% 50%;
+   }
+   100%{
+        background-position: 0% 0%;
+   } 
+}
+
+.container h1 {
+    display: flex;
+    user-select: none;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.container h1 img {
+    width: 60px;
+}
+
+.container button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(#9418fd, #571094);
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 20px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.container button:hover, .container button:focus {
+    transition: all 0.3s;
+    box-shadow: 0 2px 2px rgb(62, 62, 62), 0 2px 4px rgb(4, 4, 4);
+    transform: scale(0.95);
+}
+
+.container button img {
+    width: 30px;
+    margin-right: 15px;
+    margin-left: 3px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+    animation: slidein 0.4s forwards;
+    transition: top 0.5s ease;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+span {
+    outline: 0;
+    border: 0;
+    color: #333;
+}
+
+.input-box img {
+    cursor: pointer;
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: all 0.2s;
+}
+
+.input-box img:hover, .input-box img:focus {
+    transition: all 0.3s;
+    transform: scale(0.95);
+}
+
+.delete-animation {
+    animation: deleteanim 0.5s forwards;
+}
+
+@keyframes deleteanim {
+    0% {
+        opacity: 1;
+        height: auto;
+        top: 0;
+    }
+
+    50% {
+        opacity: 0.5s;
+        height: auto;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        top: -200px;
+    }
+}
